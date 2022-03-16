@@ -1,0 +1,12 @@
+---
+applications:
+- name: latihan-raina-spring
+  memory: 1G
+  instances: 1
+  path: target\Latihan-API-0.0.1-SNAPSHOT.jar
+  routes: 
+    - route: latihan-spring-raina.apps.pcf.dti.co.id
+  env:
+    spring.application.name: latihan-raina-spring
+    spring.cloud.services.registrationMethod: direct
+    SPRING_PROFILES_ACTIVE: oracle
